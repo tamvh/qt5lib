@@ -1,0 +1,15 @@
+prefix=/home/baohv/Dev/Raspberry/raspi4/qt5pi
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=/home/baohv/Dev/Raspberry/raspi4/qt5/bin
+qt_config=minimal-config small-config medium-config large-config full-config fontconfig libudev evdev tslib xkbcommon-evdev libinput xlib xrender xcb-plugin xcb-render xcb-glx xcb-xlib xcb-sm accessibility-atspi-bridge gbm linuxfb kms c++11 c++14 c++1z accessibility egl eglfs eglfs_brcm eglfs_gbm opengl opengles2 shared qpa reduce_exports clock-gettime clock-monotonic posix_fallocate mremap getaddrinfo ipv6ifname getifaddrs inotify eventfd threadsafe-cloexec poll_ppoll system-jpeg system-png png doubleconversion system-freetype harfbuzz system-zlib mtdev nis cups iconv glib dbus dbus-linked openssl libproxy xcb xinput2 rpath alsa pulseaudio gstreamer-0.10 icu concurrent audio-backend no-qml-debug release
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.7.0
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -lpthread -lz -licui18n -licuuc -licudata -L/home/baohv/Dev/Raspberry/raspi4/qt5pi/lib -lqtpcre -lm -ldl -pthread -L/home/baohv/Dev/Raspberry/raspi4/sysroot/usr/lib/arm-linux-gnueabihf -lgthread-2.0 -lglib-2.0 -lrt  
+Cflags: -I${includedir}/QtCore -I${includedir}
+
